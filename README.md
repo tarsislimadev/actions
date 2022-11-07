@@ -1,6 +1,6 @@
 # Actions
 
-Para entrega de software em plataforma de PaaS.
+Para entrega de software em plataformas de PaaS.
 
 ## Files
 
