@@ -1,0 +1,19 @@
+name: React.js to AWS LightSail
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - 'main'
+
+jobs:
+  docker-push:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Check out repository code
+        uses: actions/checkout@v2
+
+      - 
+        name: 
+        run: 
