@@ -4,16 +4,24 @@ on:
   workflow_dispatch:
   push:
     branches: 
-      - 'main'
+      - "main"
 
 jobs:
   docker-push:
     runs-on: ubuntu-latest
     steps:
-      - 
-        name: Check out repository code
+      - name: Check out
         uses: actions/checkout@v2
 
-      - 
-        name: 
-        run: 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Create a key pair in AWS Lightsail
+        run: aws lightsail create-key-pair --key-pair-name "key-pair-name"
+
+      - name: Create instances in AWS Lightsail
+        run: aws lightsail create-instances --instance-names "instance-name" --availability-zone "${{ secrets.AWS_DEFAULT_REGION }}a" --blueprint-id "ubuntu_20_04" --bundle-id "nano_1_0" --key-pair-name "key-pair-name"
