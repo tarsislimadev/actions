@@ -6,8 +6,6 @@ Para entrega de software em plataformas de PaaS.
 
 [AWS S3](https://...)
 
-[AWS S3](https://...)
-
 [GitHub Artifacts](https://...)
 
 [AWS LightSail](https://...)
