@@ -30,11 +30,11 @@ Para entrega de software em plataformas de PaaS.
 
 [React Native -> GitHub Artifacts](./src/github-artifacts/react-native.md)
 
+[React Native (APK) -> GitHub Artifacts](./src/github-artifacts/react-native.md)
+
 [React -> AWS S3](./src/aws-s3/react.md)
 
 [Angular -> AWS S3](./src/aws-s3/angular.md)
-
-[React Native (APK) -> GitHub Artifacts](./src/github-artifacts/react-native.md)
 
 [Docker Compose -> AWS LightSail](./src/aws-lightsail/docker-compose.md)
 
